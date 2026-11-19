@@ -10,7 +10,9 @@ description: |-
 Experimental managed DBaaS instance. Catalog-qualified version, plan, topology, storage and source CIDRs can change in place. Import uses zone-uuid/instance-id. Name, engine and zone changes require replacement.
 
 Import uses `ZONE_UUID/INSTANCE_ID`; omit creation metadata when adopting an
-existing database. Import never creates or rotates credentials.
+existing database. Import never creates or rotates credentials. In configuration,
+`zone` may be the zone's name or its UUID: both select the same zone, and
+switching between them does not replace the database.
 
 A timeout or interrupted apply does not prove that no database was created.
 Before retrying a failed creation, use the `dbaas_instances` data source to

@@ -3,12 +3,12 @@
 page_title: "dbaas_recovery_points Data Source - Locaweb Cloud DBaaS"
 subcategory: ""
 description: |-
-  Read available snapshot recovery points without creating or restoring a database.
+  Read available snapshot recovery points without creating or restoring a database. Only engines whose catalog restore_modes include snapshot have recovery points; reading any other engine fails.
 ---
 
 # dbaas_recovery_points (Data Source)
 
-Read available snapshot recovery points without creating or restoring a database.
+Read available snapshot recovery points without creating or restoring a database. Only engines whose catalog restore_modes include snapshot have recovery points; reading any other engine fails.
 
 
 
